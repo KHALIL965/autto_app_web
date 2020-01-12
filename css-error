@@ -1,0 +1,14 @@
+Css Errors 
+1. assets>css>slick-theme.css -> 
+ .slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+2. assets>css>slick-theme.css ->
+src: url('./fonts/slick.eot');
+
+3. assets>css>slick-theme.css ->
+src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+
+

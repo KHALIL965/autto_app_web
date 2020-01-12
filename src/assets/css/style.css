@@ -1,0 +1,800 @@
+@import url("fontawesome-all.min.css");
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,600i,700,700i,800,800i');
+@import url('fonts.css');
+*, html{
+  padding:0; margin:0;
+  box-sizing:border-box;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+ 
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'FuturaBT-Book';
+  font-size:14px;
+  box-sizing:border-box;
+  padding-top:90px;
+  overflow-x: hidden;
+}
+
+input[type="text"], input[type="email"], input[type="search"], 
+input[type="date"], input[type="time"], input[type="file"], 
+textarea, button, input[type="password"], input[type="tel"],    
+select {
+  -webkit-appearance:none!important;
+  -moz-appearance:none!important;
+  appearance:none!important;
+  box-shadow:none!important;
+  border-radius:2px;
+}
+a, input, button, a:focus, input:focus, button:focus {outline:none!important; box-shadow:none!important;}
+:focus {outline: -webkit-focus-ring-color auto 0px!important;}
+img{max-width:100%;}
+li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-family: 'Gibson-Bold';}
+/*h1.gill,h2.gill,h3.gill,h4.gill,h5.gill,h6.gill{font-family:'Gill Sans MT Pro Bold';}*/
+
+label.radio-design{position:relative; padding-left:25px; padding-right:2px; cursor:pointer; font-weight:400; font-size:14px; color:#909090; margin-right:8px;}
+label.radio-design input[type="radio"]{opacity:0; position:absolute; left:0; top:0; margin:0;}
+label.radio-design input[type="radio"] ~ span{position:absolute; left:0px; top:2px; width:14px; height:14px; border-radius:100%; border:1px solid #0db55a; /*box-shadow:inset 3px 5px 4px rgba(0,0,0,0.2);*/}
+label.radio-design input[type="radio"] ~ span:before{opacity:0; content:''; position:absolute; left:3px; top:3px; width:6px; height:6px; background:#0db55a; border-radius:100%; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; transform:scale(0); -webkit-transform:scale(0); -ms-transform:scale(0);}
+label.radio-design input[type="radio"]:checked ~ span:before {opacity:1; transform:scale(1); -webkit-transform:scale(1); -ms-transform:scale(1);}
+label.radio-design.dark{color:#333346;}
+label.checkbox-design{font-family: 'FuturaBT-Book';position:relative; padding-left:25px; padding-right:2px; cursor:pointer; font-weight:400; font-size:14px; color:#535f66; margin-right:8px;}
+label.checkbox-design input[type="checkbox"]{opacity:0; position:absolute; left:0; top:0; margin:0;}
+label.checkbox-design input[type="checkbox"] ~ span{position:absolute; left:0px; top:2px; width:16px; height:16px; border:1px solid #ccc;}
+label.checkbox-design input[type="checkbox"] ~ span:before{opacity:0; content:''; position:absolute; left:4px; top:2px; width:6px; height:9px; background:transparent; border-right:2px solid #0db55a; border-bottom:2px solid #0db55a; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; transform:scale(0) rotate(45deg); -webkit-transform:scale(0) rotate(45deg); -ms-transform:scale(0) rotate(45deg);}
+label.checkbox-design input[type="checkbox"]:checked ~ span{border:1px solid #0db55a;}
+label.checkbox-design input[type="checkbox"]:checked ~ span:before {opacity:1; transform:scale(1) rotate(45deg); -webkit-transform:scale(1) rotate(45deg); -ms-transform:scale(1) rotate(45deg);}
+label.checkbox-design.dark{color:#333346;}
+label.checkbox-design2{position:relative; padding-left:25px; padding-right:2px; cursor:pointer; font-weight:500; font-size:14px; color:#333346; margin-right:8px; margin-bottom:0px;}
+label.checkbox-design2 input[type="checkbox"]{opacity:0; position:absolute; left:0; top:0; margin:0;}
+label.checkbox-design2 input[type="checkbox"] ~ span{position:absolute; left:0px; top:2px; width:16px; height:16px; border-radius:2px; border:1px solid #d8d8d8; background:#fff;}
+label.checkbox-design2 input[type="checkbox"] ~ span:before{opacity:0; content:''; position:absolute; left:4px; top:2px; width:6px; height:9px; background:transparent; border-right:2px solid #333649; border-bottom:2px solid #333649; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; transform:scale(0) rotate(45deg); -webkit-transform:scale(0) rotate(45deg); -ms-transform:scale(0) rotate(45deg);}
+label.checkbox-design2 input[type="checkbox"]:checked ~ span{border:1px solid #333649;}
+label.checkbox-design2 input[type="checkbox"]:checked ~ span:before {opacity:1; transform:scale(1) rotate(45deg); -webkit-transform:scale(1) rotate(45deg); -ms-transform:scale(1) rotate(45deg);}
+.btn{font-family: 'FuturaBT-Book';}
+
+header{background:rgba(255,255,255,0.9);position:absolute; display:flex; flex-flow: row wrap; width:100%; top:0; left:0; z-index:999; min-height:90px; padding:0px 0px; }
+header > nav{padding:0px 30px;transition:0.5s}
+header.fixed {background:#ffffff; position: fixed; top: 0; left: 0; width: 100%; opacity:0; visibility:hidden; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2); transform:translate(0, -50px); }
+header.fixed nav a, header.fixed .logo a{color:#555555; }
+header.in-view{opacity:1; visibility:visible; transition: all 0.6s ease; transform:translate(0, 0); }
+
+.container-common{width:100%; max-width:1240px; margin:0 auto; padding-left:15px; padding-right:15px;}
+
+
+.logo{width:100%; max-width:70px; height:auto;}
+.logo a{display:block;}
+.logo img{width:100%; height:auto;}
+.logo .mobile-logo{display:none;}
+.btn-help{ background:transparent; color:#33335f; font-size:14px;}
+.btn-help:hover{color:#ff2801;}
+.btn-notification{ background:transparent; color:#33335f; font-size:28px; padding:0px 6px; position:relative;}
+.btn-notification i{transform:rotate(-30deg); -webkit-transform:rotate(-30deg); -ms-transform:rotate(-30deg);}
+.btn-notification span.badge{ background:#ff2801; color:#fff; font-size:11px; border-radius:15px; padding:2px 5px; position:absolute; top:4px; right:7px;}
+.btn-notification:hover{color:#aaa;}
+.btn-logSign{color: #10172f; font-size: 13px; border:1px solid #10172f; border-radius: 2px; margin-left: 5px; padding: 8px 20px;} 
+.btn-logSign:hover, .btn-logSign.active{background:#10172f; color:#ffffff ;}
+
+.menu{float:right; width:auto; position:relative;}
+.menu ul {padding:0px; margin:0;}
+.menu ul li{display:inline-block; padding:15px 20px;}
+.menu ul li a{ color:#555555; font-size:13px;font-family: 'FuturaBT-Book';}
+.menu ul li a i{margin-left:5px;}
+.menu ul li a:hover{color:#10172f; text-decoration:none;}
+.menu ul li a.dropdown-toggle::after{display:none;}
+
+.mob-menu{display:none; position:absolute; right:10px; top:50%; margin-top:-20px; width:40px; height:40px; cursor:pointer;}
+.mob-menu:hover{color:#000; cursor:pointer;}
+.mob-menu span.menu-bar{position:absolute; right:0px; top:50%; margin-top:-1px; width:25px; height:2px; background:#000;}
+.mob-menu span.menu-bar:before{content:''; position:absolute; right:0px; top:50%; margin-top:-8px; width:30px; height:2px; background:#000;}
+.mob-menu span.menu-bar:after{content:''; position:absolute; right:0px; top:50%; margin-top:6px; width:30px; height:2px; background:#000;}
+.after-login{}
+.after-login ul li a{background:}
+.login-box{/*max-width:250px*/}
+.login-box a.dropdown-toggle{color:#fff;font-size:13px;text-decoration:none;}
+.login-box a.dropdown-toggle img{border-radius:6px;}
+.login-box a.dropdown-toggle:after{display:none;}
+.login-box a.dropdown-toggle + .dropdown-menu{}
+.login-box a.dropdown-toggle + .dropdown-menu li{}
+.login-box a.dropdown-toggle + .dropdown-menu li a{color: #10172f; display: block; font-size: 13px; padding: 4px 15px;}
+.login-box a.btn-white{font-size: 13px;}
+.btn-bell{color:#fff; font-size:26px; position:relative; padding:5px 10px; transform:rotate(-20deg); -webkit-transform:rotate(-20deg); -ms-transform:rotate(-20deg);}
+.btn-bell:hover{color:#fff;}
+.notiVal{position:absolute; width:17px; height:17px; top:9px; right:5px; border-radius:50%; text-align:center; background:#303333; color:#fff; font-size:11px; transform:rotate(20deg); -webkit-transform:rotate(20deg); -ms-transform:rotate(20deg);}
+.btn-user{width:50px; height:50px; border-radius:50%; overflow:hidden; padding:0px;}
+.btn-user img{width:100%; height:auto;}
+
+
+
+
+.dropdown-menu.head-drop-down.show:before {content: ""; border-bottom: 10px solid #0b172e; border-left: 10px solid transparent; border-right: 10px solid transparent; position: absolute; top: -9px; right:12px; }
+/* .top_user_info {position:relative; display: inline-block; text-align:right; vertical-align: middle; max-width: calc(100% - 72px); min-width:200px; margin-left:15px;border-left:1px solid #778599; }
+.top_user_info .dropdown-toggle::after{border:none;}
+.head-user-name {color:#fff;font-size:14px;margin-right:0;width:calc(100% - 55px);white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-weight:500;}
+.head-user-img {border-radius: 50%; width: 50px; height: 50px; margin-left:0px; position:relative;} */
+
+.header_select_box {width:520px;}
+.dropDownStyle .dropdown-toggle:after{border-top-color:#fff;border-width:6px;display:none;}
+.dropDownStyle .dropdown-toggle i{margin-left:5px;display:inline-block;}
+
+
+.dropdown-menu.main-dropdown{background:#0b172e; border:none; border-radius:0px; top:100%!important; padding:0px;}
+.dropdown-menu.main-dropdown:before {content: ""; border-bottom: 10px solid #0b172e; border-left: 10px solid transparent; border-right: 10px solid transparent; position: absolute; top: -9px; left: 12px; }
+.dropdown-menu.main-dropdown li{padding:0px!important; display:block;}
+.dropdown-menu.main-dropdown li + li{/*border-top:1px dashed #fff;*/
+/*   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0) 20%);
+  background-position: top;
+  background-size: 12px 1px;
+  background-repeat: repeat-x; */
+  border-top:1px solid #60646c;
+}
+.dropdown-menu.main-dropdown li a{font-family:'Arial';color:#fff; font-size:13px; font-weight:300; text-transform:none; text-shadow:none; padding:10px;}
+.dropdown-menu.main-dropdown li a:hover{background:transparent;color:#fff;}
+
+.close-menu{display:none; position:absolute; right:10px; top:10px; width:30px; height:30px; border-radius:100%;}
+.close-menu:before{
+  content:''; position:absolute; width:18px; height:2px; left:4px; top:14px; margin-top:-1px; background:#ff2801;
+  transform:rotate(45deg); -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg);
+}
+.close-menu:after{
+  content:''; position:absolute; width:18px; height:2px; left:4px; top:14px; margin-top:-1px; background:#ff2801;
+  transform:rotate(-45deg); -webkit-transform:rotate(-45deg); -ms-transform:rotate(-45deg);
+}
+
+
+
+.main-content{width:100%;width: 100%; min-height: calc(100vh - 410px); background: #ffffff }
+
+.banner-home{position: relative; width: 100%; padding-bottom: 0; padding:0;}
+.topBanner-content{min-height: 380px; position: absolute; z-index: 9; top: 90px; width: 690px!important; right: 0; max-width: 50%;}
+.topBanner-container{width: 100%; max-width: calc(100% - 150px); margin: 0 auto;}
+.topBanner-content h1{ margin: 0; color:#353f59; font-size: 36px; }
+.topBanner-content h2{color:#ff9326;font-size:28px;margin:10px 0;}
+.topBanner-content p{color:#353f59;margin:0 0 30px;}
+.topBanner-content .btn + .btn{margin-left:10px;}
+/* .banner-home:after {content: ""; background: #fff; height: 130px; position: absolute; bottom:-1px; left: 0; right: 0; } */
+.banner_head {margin-bottom:10px;padding-top:80px;}
+.banner_head h2 {margin:0 0 15px;     font-size: 28px;color: #fff; line-height:1;}
+.banner_head p {margin:0px;color: #fff;font-size:14px;}
+.topBanner-button{margin-top:35px;}
+.btn-banner{width:250px; padding:12px 10px; font-size:14px; margin:4px;}
+
+
+.banner-inner{min-height:300px;}
+.banner-inner .banner-text h1{ font-size:30px; color:#fff;}
+.banner-inner .banner-text p{font-size:14px; color:#fff;}
+
+.commonSectionStyle{padding:4em 0;}
+.section-head { width: 100%; text-align: center; margin-bottom:10px; }
+.section-head h3 { margin: 0px; color: #14315d; font-size:20px; }
+.section-head h2 { margin: 0px; color: #7e7e7e; font-size: 26px;font-family: 'FuturaBT-Book';}
+.section-head p { margin: 10px 0 0; font-size: 14px; line-height: 1.6;color:#5d5d5d; }
+
+.secWhite.section-head h2,.secWhite.section-head p,.secWhite.section-head h6{color:#fff;}
+
+.btn-yellow{background: rgb(255,147,38);background: linear-gradient(180deg, rgba(255,147,38,1) 0%, rgba(255,191,0,1) 100%);color:#fff;font-weight: 400;border:0;border-radius:25px;box-shadow: 2px 0px 8px #cdcdcd!important;}
+.btn-yellow:hover, .btn-yellow:focus,
+.btn-yellow.focus, .btn-yellow.active { opacity:0.9;color:#fff;}
+
+.btn-white-outline{background-color:transparent;color:#fff;font-weight: 400;border:2px solid #fff;border-radius:0;}
+.btn-white-outline:hover, .btn-white-outline:focus,
+.btn-white-outline.focus, .btn-white-outline.active {background-color:#fff;color:#2e2c6c; opacity:0.9;}
+
+.btn-large{padding:8px 12px;font-family: 'FuturaBT-Book';}
+.btn-free-trail, .btn-free-trail:active {color: #555555;font-size: 13px;font-family: 'FuturaBT-Book';border-color:none;border:0;}
+.btn-free-trail:hover, .btn-free-trail:focus,
+.btn-free-trail.focus, .btn-free-trail.active {color: #555555;  opacity:0.9; }
+
+/*Reputation management company start*/
+.ReputationManagement{padding-bottom: 0;}
+.ReputationManagement .section-head{}
+.ReputationManagement h2{margin: 0px; color: #7e7e7e; font-size: 26px;}
+.openRatelist{display:flex;flex-wrap:wrap;}
+.openRatelist ul{}
+.openRatelist ul li{background: url(../images/checkIc.png) no-repeat 0% 45%/44px;margin: 0;font-size: 14px;
+  color: #5d5d5d;padding: 4px 0 4px 60px;}
+.openRatelist ul li h5  {color:#71d499;font-family: 'FuturaBT-Book';font-size:16px;}
+.mobile-sreen{position: relative;padding: 0 40px;top: -200px;}
+.mobile-sreen img{position:relative;z-index:1;}
+
+/*Reputation management company end*/
+
+/*Authentic Customer start*/
+.AuthenticCustomer{padding-top: 0;padding-bottom:30px;margin-top:-150px;}
+.AuthenticCustomer .section-head{}
+.AuthenticCustomer h2{margin: 0px; color: #7e7e7e; font-size: 26px;}
+.Reviewlist{display:flex;flex-wrap:wrap;}
+.Reviewitem{width:100%;display:flex;align-items: center;margin:20px 0 0;position:relative;}
+.Reviewitem:last-child:before{display:none;}
+.ReviewIcon{margin-right: 15px;width:40px;}
+.ReviewIcon span{text-align: center; width: 20px; height: 20px;}
+.ReviewIcon span img{height:initial;}
+.ReviewText{}
+.ReviewText h5{margin:0;font-size:16px;color:#71d499;font-family: 'FuturaBT-Book';}
+.ReviewText p{margin:0;font-size:14px;color:#5d5d5d;}
+
+/*Authentic Customer end*/
+
+/*Customers Receive start*/
+.CustomersReceive{padding-top:2em;padding-bottom:30px;position: relative;}
+.CustomersReceive:before{width: 100%;content: " "; background:url(../images/triangle-shape.png) no-repeat 100% 100%/100%;
+  position: absolute;left: 0; top: 0; height: 370px;z-index:0;}
+.CustomersReceive .section-head{position: relative; z-index: 1;}
+.CustomersReceive h2{margin: 0px; color: #fff; font-size: 26px;}
+.CustomersReceive p{color:#fff;}
+.easily-review{background:none;}
+.easily-review::before{display:none;}
+.easily-review h2{color: #7e7e7e;}
+.easily-review p{color: #5d5d5d;}
+
+/*Customers Receive end*/
+
+
+/*Restaurant Revenue start*/
+.reviewManagement{padding: 40px 0 0;background:url(../images/review-management.png) no-repeat 0% 210px/48%}
+.reviewManagement .section-head{}
+.reviewManagement .container-common {padding-left:42%; }
+.review-content{padding: 20px 30px 20px}
+.reviewlist{display:flex;flex-wrap:wrap;}
+.reviewlist ul{}
+.reviewlist ul li{background: url(../images/checkIc.png) no-repeat 0% 45%/44px;margin: 0;font-size: 14px;
+  color: #5d5d5d;padding: 4px 0 4px 60px;}
+.reviewlist ul li h5  {color:#71d499;font-family: 'FuturaBT-Book';font-size:16px;}
+
+/*Restaurant Revenue end*/
+
+/*Authentic Customer start*/
+.ratting-sec{padding-top: 0;padding-bottom:30px;}
+.ratting-sec .section-head{}
+.ratting-sec h2{margin: 0px; color: #7e7e7e; font-size: 26px;}
+.ratting-content{display: flex;align-items: center;height: 100%;}
+.ratting-line{top: 41%;left: -44%;max-width: 100%; width: 370px;}
+/*Authentic Customer end*/
+
+
+/*Footer section Start*/
+
+footer {background:#fff ; position: relative; padding:0px; }
+.footer-container{width: 100%;max-width: 1500px;margin: 0 auto;padding: 30px 15px 0;border-top: 1px solid #d6d6d6;}
+.footer-content h5{font-family: 'FuturaBT-Book'; color:#fff; margin-bottom:12px;}
+.footer-content p{font-family: 'FuturaBT-Book'; margin:0px; color:#353f59; font-size:13px;}
+.footer-manu a{display:inline-block; color:#fff; font-size:13px; position:relative; padding:0px 8px;}
+.footer-manu a:before{content:'|'; position:absolute; right:-4px; top:0px;}
+.footer-manu a:first-child{padding-left:0;}
+.footer-manu a:last-child:before{content:'';}
+
+.social-manu{display:block; width:100%; position:relative; margin-top:0px;}
+.social-manu a{display:inline-block; width:32px; height:32px; text-align:center; line-height:32px; color:#fff; background:rgba(0,0,0,0.4); font-size:18px;transition:0.6s}
+.social-manu a:hover{background:#ce535a;transition:0.6s}
+
+.foot-logo{max-width: 70px;height: auto;margin-bottom: 5px;}
+.foot-logo img{width:100%;height:100%;}
+.fotter-left-text{color:#fff;font-size:14px;font-weight:300;}
+.fotter-left-text span{color:#f1592a;font-weight:500}
+.footer-content { padding: 30px 60px;border-bottom: 1px dashed #fff; }
+.footer-content ul  {margin:0}
+.footerMenuList > li{padding:0 15px;}
+.footer-content ul li {display:inline-block;width:calc(18% - 20px);vertical-align:top;}
+.footer-content ul li:first-child{width:30%;}
+.footer-content ul li:last-child{width:30%;}
+.footer-content ul li + li{margin-top:0px;}
+.footer-content ul li li{margin-top:5px;width:auto!important}
+.footer-content ul li a{color:#535353;font-size:13px;display:block;font-weight:300}
+.footer-heading{font-size:18px;margin:0 0 15px;color:#34b266;font-weight: 400;font-family: 'FuturaBT-Book';}
+.footer-content ul li .inner-list-footer li{width:100%;display:block}
+.footer-content ul li .social-manu  a{display:inline-block;}
+.footer-bottom {background: transparent;padding: 20px 0;}
+.copy-right-text p{color:#535353;margin:0;font-weight:normal;}
+.copy-right-text a{color:#0ab251;position:relative;margin-right:10px;padding-right: 10px;font-size:12px;}
+.copy-right-text a:before {content: ""; position: absolute; right: -1px; top: 1px; background: #0ab251; width: 1px; height: 14px; }
+/*Footer section End*/
+
+
+
+/******inner pages********/
+
+.form-block{width: 100%; padding: 20px; margin: 0 auto 0px;}
+.form-block:after{content:''; display:table; clear:both;}
+.form-header{width:100%;position:relative;padding:10px 20px;}
+.form-header h3{font-family: 'FuturaBT-Book'; margin:0px; margin-bottom:0px; color: 333f59; font-size:28px;}
+.form-header p{margin:0px;color:#525f66;font-size: 13px;margin-top:5px;font-family: 'FuturaBT-Book';font-style:italic;}
+.form-box{width:100%; padding:10px 10px;}
+.common-label{font-family: 'FuturaBT-Book';font-style:italic;color:#333f59;padding-left: 15px;}
+.main-form{display:block; margin:0 auto;padding:20px 10px;border-radius:5px;}
+.main-form .form-group{margin-bottom:15px;}
+.main-form .select-dropdown input.form-control{height:38px; border-radius:0px; border:1px solid #d8d8d8; color:#454545;}
+.main-form .input-wrapper{position:relative;}
+.main-form .input-wrapper i{position:absolute; top:50%; left:15px; color:#d8d8d8; font-size:22px; transform:translate(0, -50%); -webkit-transform:translate(0, -50%); -ms-transform:translate(0, -50%);}
+.main-form .input-wrapper input.form-control{padding-left:45px;}
+.main-form input.form-control{height:44px; border:1px solid #d8d8d8; border-radius:4px; color:#818181; font-size:14px;}
+.main-form select.form-control{height:44px!important; border:1px solid #d8d8d8; border-radius:4px; color:#818181; font-size:14px;}
+.main-form .custome-label{margin-bottom:0px; color:#828282; font-size:14px;}
+.main-form .forgotPass{color:#828282; font-size:14px; padding:0 .75rem;}
+.main-form input.form-control::-webkit-input-placeholder {color:#a3a3a3;font-size:13px;}
+.main-form input.form-control::-moz-placeholder {color:#a3a3a3;font-size:13px;}
+.main-form input.form-control:-ms-input-placeholder {color:#a3a3a3;font-size:13px;}
+.main-form input.form-control:-moz-placeholder {color:#a3a3a3;font-size:13px;}
+.main-form textarea.form-control{width:100%; border:1px solid #d8d8d8; border-radius:4px; color:#818181; resize:none; font-size:14px;}
+.main-form textarea.form-control::-webkit-input-placeholder {color:#a3a3a3;}
+.main-form textarea.form-control::-moz-placeholder {color:#a3a3a3;}
+.main-form textarea.form-control:-ms-input-placeholder {color:#a3a3a3;}
+.main-form textarea.form-control:-moz-placeholder {color:#a3a3a3;}
+.main-form textarea.form-control{height:134px}
+.select-custome{padding:0px 10px; color:#818181; border:1px solid #d8d8d8; background: transparent url(../images/arrow-icon.png)no-repeat scroll calc(100% - 10px) 50%/15px auto;}
+.select-custome2{padding:0px 10px; color:#818181; border:1px solid #d8d8d8; background: transparent url(../images/down_arrow.png)no-repeat scroll calc(100% - 10px) 50%/15px auto;}
+.select-custome3{padding:0px 10px; color:#818181; border:1px solid #d8d8d8; background: transparent url(../images/caret_arrow.png)no-repeat scroll calc(100% - 10px) 50%/22px auto;}
+.main-form select.form-control.select-time{background:transparent url(../images/caret_arrow.png)no-repeat scroll calc(100% - 4px) 50%/18px auto; padding-right:25px; height:30px!important;}
+.calender{background: transparent url(../images/icon-calender.png)no-repeat scroll calc(100% - 10px) 50%/22px auto;}
+.calender2{background: transparent url(../images/icon-calender2.png)no-repeat scroll calc(100% - 10px) 50%/22px auto;}
+
+
+/*Login Page Start*/
+
+.btn.btn-login{font-family: 'Arial';max-width:200px; border: 1px solid #fcc213; color: #fff; border-radius: 0; padding: 10px 0;  background: #fcc213;}
+.btn.btn-login:hover,.btn.btn-login:focus{background:#2e2c6c;border: 1px solid #2e2c6c; color: #fff;}
+.forget-text{color:#949494;text-decoration:underline;font-family: 'FuturaBT-Book';}
+.error{color: #f93a3a; font-size: 12px;font-family: 'FuturaBT-Book';}
+.hide{display:none;}
+.loginbg p{color:#949494;font-family: 'FuturaBT-Book';}
+
+
+/*Login Page End*/
+
+/*Dashboard Page Start*/
+body.LoggedIn{padding-top:0;}
+.LoggedIn header{position: relative;z-index: 3; min-height: 60px; border-bottom: 1px solid #ddd;padding: 10px 0; }
+.LoggedIn header.fixed{opacity: 1;position: fixed; visibility: visible; transition: all 0.6s ease; transform: translate(0, 0);}
+.LoggedIn header .menu-loged {float: right; width: auto; position: relative; }
+.LoggedIn header ul{display:flex;align-items:center;margin:0;}
+.LoggedIn header ul li{padding:2px 15px;position:relative;}
+.LoggedIn header ul li a{color:#b1c3c8;}
+.LoggedIn header ul li a:hover{color:#007db5;}
+.top_user_info {background: #ddd; border-radius: 25px;  padding-right: 10px;}
+.head-user-img{display: flex; align-items: center;cursor: pointer;}
+.head-user-img img{border-radius:50%;width:30px;height:30px;}
+.top_user_info .head-drop-down {right: -10px;left: auto!important;}
+.top_user_info .head-drop-down a{color: #8c8a8a; font-family: 'ProximaNova-Regular'; font-size: 14px;}
+.welcom_person{margin-left:10px;color:#7b7a7a;}
+.badge-noti{background: #3ab125; border: 3px solid #d1f1cb; border-radius: 50%; width: 22px; height: 22px; right:-2px; top:-12px; font-size: 10px; color: #fff; text-align: center; line-height: 18px}
+.email-noti{background: #e0536f; border: 3px solid #f9dde2; border-radius: 50%; width: 12px; height: 12px; right:6px; top:-2px;}
+.inner-page-container{}
+
+.left-panel{width: 280px;padding-right: 20px;margin-right: 20px;border-right: 1px solid #ddd;}
+.business-info{}
+.business-info h2{font-family:'FuturaBT-Book'; font-size: 24px; margin: 10px 0;}
+.business-info p{font-family:'FuturaBT-Book';font-style: italic;}
+.social-icons{margin-bottom:10px;}
+.social-icons a{margin-right:5px;}
+.menu-list{padding-right: 40px;}
+.menu-list ul{margin:0;}
+.menu-list ul li{margin:5px 0;}
+.menu-list ul li a{font-family: 'FuturaBT-Book';text-decoration:none; border-radius: 4px;color: #909090; background: #ddd; padding:8px 15px; display: block; box-shadow: 0 2px 4px #ddd!important;}
+.menu-list ul li.active a,.menu-list ul li a:hover,.menu-list ul li a:focus{background:#0db55a;color:#fff;}
+
+.right-pannel{width:100%;max-width:calc(100% - 300px);padding: 0 20px;}
+
+.ratting-box{background:#fff;box-shadow:0 0px 8px #ddd;min-height:120px;position:relative;padding-top: 44px;
+    text-align: center;border-radius:8px;}
+.ratting-catg{background: #ffffff; box-shadow:0 2px 6px #dccece; position: absolute; top: -30px; left: 20px; padding: 10px; border-radius: 6px; width: 60px; height: 60px;}
+.yelloy-bg{background:#fd960e;}
+.red-bg{background:#ea4542;}
+.blue-bg{background:#0bb3c8;}
+.ratting-text{}
+.ratting-count{font-size: 33px; line-height: 30px; font-family: 'FuturaBT-Book'; font-weight: 600;}
+.yelloy-text{color:#fd960e;}
+.red-text{color:#ea4542;}
+.blue-text{color:#0bb3c8;}
+.open-ticket{background:#ebebeb;padding:15px;border-radius: 6px;}
+.ticket-title{font-size:18px;}
+.open-ticket p{margin:0;line-height: 16px;}
+.btn.btn-white{background:#fff;border-radius:4px;color:#343f59;}
+
+.chart-box{border: 1px solid #ddd; border-radius: 8px; padding: 15px;margin-bottom:20px;}
+.chart-graph{border-top:1px solid #ddd;margin-top: 10px;}
+.subtitle{font-size:18px;}
+.latest-review{border: 1px solid #ddd; border-radius: 8px; padding: 15px;margin-bottom:20px;}
+.latest-review select{}
+
+.review-items{overflow-y:auto;max-height:530px;border-top: 1px solid #ddd;margin-top:10px;}
+.review-item{position: relative;border-bottom: 1px solid #ddd; padding-right: 50px; min-height: 50px; padding-top: 10px;}
+.review-item:last-child{border-bottom:0;}
+.review-cont{margin-bottom: 10px;}
+.btn.btn-reply{background: #fff; border-radius: 4px; border: 1px solid #ddd; color: #232323;}
+.btn.btn-reply:hover,.btn.btn-reply:focus{background:#0db55a;color: #fff;}
+.like-ic{position:absolute;right:10px;top:16px;}
+
+/*Dashboard Page End*/
+
+/*Analytical report Page Start*/
+.ratting-point {display: flex; text-align: center; justify-content: center;margin-top: 10px; }
+.out-of-point{font-size: 22px; color: #0cb459; line-height: 24px}
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  margin:0;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+  
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:1.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {color:#FF912C; }
+.rating-stars p{font-size:12px;margin: 0;}
+.responses {margin:8px 0 45px;}
+.progress-cat{display:flex;}
+.progress-cat-bar{height:10px;position:relative;}
+.progress-cat-bar em{position: absolute; top: 15px; width:56px; line-height: 15px; text-align: center;}
+.fs-16{font-size:16px;}
+.progress-item {display: flex; justify-content: space-around;align-items: center;margin: 4px 0;}
+.ratting-name{color:#333f59;font-size:15px;}         
+.progress-item  .progress{min-width:80px;width:100%;max-width:105px;height:6px;}
+.progress-item .progress-bar{background:#ffc926;}
+.ratting-percent{color:#909090;font-size: 12px;}  
+
+
+
+/*Analytical report Page End*/
+
+.search-form {margin: 10px 0; display: flex;justify-content:space-between;align-items:center;}
+.search-form input {border-radius: 6px; width: calc(100% - 160px); box-shadow: 0 0px 4px #ddd!important;margin-right: 15px; }
+.ques-ans{margin: 20px 0;border:0px;}
+.ques-ans .card-header{background:transparent;border:0px;padding:10px 0px;}
+.faq-ques{color:#04a74b;font-family: 'FuturaBT-Book';font-size:18px;}
+.faq-ans{color:#827d7d;font-family: 'FuturaBT-Book';padding:0px;}
+.faq-ques:hover{color:#04a74b;}
+
+.table.ticket-table tr {border-radius:6px;border:1px solid #ddd;}
+.table.ticket-table td, .table.ticket-table th{border:0;color:#52668d;}
+.table.ticket-table td a, .table.ticket-table th a{color:#52668d;}
+.table.ticket-table th .checkbox-design{font-weight:bold;margin: 0;}
+
+.list-label{color:#333f59;font-family: 'FuturaBT-Book';font-size:18px;}
+.list-label em{font-style:italic;font-size:12px;  }
+.list-anchor{margin-bottom:2px;}
+.list-anchor a{color:#827d7d;font-family: 'FuturaBT-Book';}
+
+.btn.btn-green,.btn.btn-gray{background:#0db55a;color:#fff;min-width:160px;box-shadow: 0 0px 4px #ddd!important;}
+.btn.btn-gray{background:#a1a1a1;color:#fff;}
+.btn.btn-gray:hover,.btn.btn-gray:focus{background:#0db55a;color:#fff;}
+
+.table.ticket-table td a.btn-green{background:#0db55a;color:#fff;padding:3px 15px;min-width:auto;}
+
+.banner-sec{height:300px;position:relative;}
+.banner-sec img{object-fit:cover;height:300px;}
+
+.common-heading-sec{padding:10px 0; min-height:80px;}
+.common-heading-sec h2{color:#343f59;font-size:24px;margin:0px 0 5px;font-family: 'FuturaBT-Book';}
+.common-heading-sec p{color:#343f59;font-size:14px;font-family: 'FuturaBT-Book';}
+
+
+/*inner-content-pages*/
+.inner-common-heading {width: 100%;padding: 50px 0; min-height: 150px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.inner-common-heading h2{color:#fff;font-size:24px;margin:0px 0 5px;font-family: 'FuturaBT-Book';}
+.inner-common-heading p{color:#fff;font-size:14px;font-family: 'FuturaBT-Book';}
+.bdr-btm{border-bottom:1px solid #d9d9d9;}
+.inner-content-mainblock.mt-top-minus{margin-top:-40px;}
+.inner-content-block-s{background:#fff;box-shadow:0 0 30px rgba(0,0,0,.2);padding:10px 0 0;border-radius:4px;margin:0 0 40px;}
+.notication-list{margin:0px;}
+.notication-list li {padding:15px 20px 15px; background: #e7e8e9; border-radius: 6px;}
+.notication-list li p{color:#525f66;font-size:14px;font-weight:400;margin:0px}
+.notication-list li p.date-section{font-style:italic;font-size:12px;}
+.notication-list li+li{/*border-top:1px solid #ddd;*/padding:15px 20px 15px;margin:10px 0 0px}
+.min-heght700{min-height:600px}
+.common-paragraph{color:#525f66;font-size:16px;font-weight:500;}
+/*inner-content-pages-end*/
+
+
+.mt-top-minus{margin-top:-80px;}
+.box-shadow{box-shadow:0 0px 10px #ddd!important;}
+.step-form{background: #fff; position: relative; margin-bottom: 40px;border-radius:8px;padding:40px 80px;}
+.step-form .form-header{padding:20px 0;}
+.step-form .main-form{padding:0;}
+.reqiured{color:#000;}
+.main-form input.form-control.visa{background:url('../images/visa.png') no-repeat 96% 52%/40px;}
+
+
+/*Steps start*/
+.step {
+  list-style: none;
+  margin: .2rem 0;
+  width: 100%;
+}
+
+.step .step-item {
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  margin-top: 0;
+  min-height: 1rem;
+  position: relative; 
+  text-align: center;
+}
+
+.step .step-item:not(:first-child)::before {
+  background: #81bcb3;
+  content: "";
+  height: 2px;
+  left: -50%;
+  position: absolute;
+  top: 9px;
+  width: 100%;
+}
+
+.step .step-item a {
+  color: #acb3c2;
+  display: inline-block;
+  padding: 20px 10px 0;
+  text-decoration: none;
+}
+
+.step .step-item a::before {
+  background: #81bcb3;
+  border: .1rem solid #fff;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: .9rem;
+  left: 50%;
+  position: absolute;
+  top: .2rem;
+  transform: translateX(-50%);
+  width: .9rem;
+  z-index: 1;
+}
+
+.step .step-item.active a::before {
+  background: #fff;
+  border: .1rem solid #81bcb3;
+}
+
+.step .step-item.active ~ .step-item::before {
+  background: #e7e9ed;
+}
+
+.step .step-item.active ~ .step-item a::before {
+  background: #e7e9ed;
+}
+
+/*Steps End*/
+
+.price-box{border:0;border-top:5px;border-style:solid;border-radius:8px;padding:20px 20px;}
+.price-box.yellow{border-color:#fcc213;}
+.price-box.green{border-color:#2fc970;}
+.price-box-head{border-bottom:1px solid #ddd;}
+
+.text-yellow{color:#fcc213;font-family: 'FuturaBT-Book';}
+.text-green{color:#2fc970;font-family: 'FuturaBT-Book';}
+.pricing-count{margin:20px 0;}
+.pricing-count h3{font-size:28px;font-weight:700;font-family: 'FuturaBT-Book';}
+.pricing-count p{font-size:14px;font-family: 'FuturaBT-Book';}
+.price-box .btn{min-width:200px;font-size:15px;}
+.price-box .button-green{background:#2fc970;border-color:#2fc970;}
+
+.no-bg{background:#fff;}
+button.dropdown-toggle{box-shadow:0 0px 10px #ddd!important;}
+.user-img{width:150px;}
+.user-img img{width:90px;height:90px;border:1px solid #ddd;border-radius:50%;box-shadow:0 0px 10px #ddd!important;}
+.review-ratting{border-bottom:1px solid #ddd;margin-bottom: 15px; padding-bottom: 15px;}
+.review-ratting h3{color:#0cb459;font-size:22px;margin:0;font-family: 'FuturaBT-Book';margin-right:20px;}
+.review-ratting .like-ic{top:0;}
+.common-modal{
+
+}
+.common-modal .modal-header h4{font-family: 'FuturaBT-Book';font-size:22px;color:#0cb359;}
+.common-modal h6{font-family: 'FuturaBT-Book';}
+.modal_flax_height2{max-height:400px;overflow-y:auto;}
+.invite-list{border-bottom:1px solid #ddd;padding: 10px;}
+.invite-list label.radio-design{margin:0;}
+.invite-list p{margin:0;font-family: 'FuturaBT-Book';font-size:13px;}
+.set-date{border:1px solid #0cb459;background:#fff;border-radius:4px;}
+.set-date label,.set-date input{height:36px;}
+.set-date label{background:#0cb459;padding: 0 10px;}
+.set-date input,.set-date select{background:#fff;border:0;background:#fff;min-width:190px;}
+.set-date input.calander{background:url(../images/calender-ic.png) no-repeat 100% 52% /16px;}
+.set-date select.dropdown{background:url(../images/dropdown-ic.png) no-repeat 100% 52% /12px;}
+.btn-common,.btn-common-filled{min-width:120px;border:1px solid #555555;border:1px solid #555555;border-radius:6px;color:#555555;}
+.btn-common:hover{color:#555555;}
+.btn-common-filled{background:#555555;color:#fff;}
+.btn-common-filled:hover{color:#fff}
+.model-footer{padding:0 20px;}
+
+.drag-drop{position:relative;background: #eaeaea; border: 1px solid #d8d8d8; border-radius: 4px; padding:20px 20px 0; text-align: center;}
+.drag-drop .input-drag-drop{opacity: 0; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.modal-inner-content select.dropdown-filed{background:url(../images/dropdown-ic.png) no-repeat 97% 52% /12px;}
+
+.review-list h6{font-family: 'FuturaBT-Book';font-size:16px;}
+
+.modal-inner-content select.dropdown-filed {background: url(../images/dropdown-ic.png) no-repeat 97% 52% /12px; }
+.star-form{margin-top:30px;}
+.star-form form select.dropdown-filed {width:160px;background: url(../images/dropdown-ic.png) no-repeat 92% 52% /12px; }
+.nav-tabs.custum-tab{border:1px solid #ddd;border-radius:4px;}
+.nav-tabs.custum-tab .nav-item{margin-bottom:0;}
+.nav-tabs.custum-tab .nav-link {border:0;border-radius:0;background:#d6d6d6;color:#666666;}
+.nav-tabs.custum-tab .nav-item.show .nav-link, 
+.nav-tabs.custum-tab .nav-link.active{background:#fff;border:0;color:#666666;}
+
+form select.dropdown-media {background: url(../images/dropdown-ic.png) no-repeat 92% 52% /12px; }
+.form-link a {font-family: 'FuturaBT-Book'; font-style: italic; color: #333f59; text-decoration:underline;}
+.social-media{font-family: 'FuturaBT-Book'; color: #333f59; font-size: 22px; padding-left: 15px; font-weight: 400; margin-top: 20px;}
+.search-filter{border:1px solid #ddd;border-radius:4px;display:flex;}
+.search-filter label{background: #d6d6d6; line-height: 36px; margin: 0; padding: 0 10px; min-width: 90px; text-align: center;}
+.search-filter .dropdown{width: 17%;max-width:auto;}
+.search-filter .btn.btn-gray {background: #fff; color: #666666; box-shadow: none!important; border-left: 1px solid #ddd; border-radius: 0; }
+.search-filter .btn.btn-gray:first-child{min-width:100px;}
+
+.main-form .copy-widget{display:flex; border: 1px solid #d8d8d8; border-radius: 4px;}
+.main-form .copy-widget .form-control{border:0} 
+.main-form .copy-widget .form-control.copy-code{width:160px;background:#666666;cursor:pointer;color:#fff;border-radius:0px 4px 4px 0px;} 
+
+/* user-section */
+
+.user-section{background:url('../images/user-bg.jpg') no-repeat 0 0/cover;padding-top:0;}
+.user-section p{color: #343f59; font-size: 16px;}
+.userSec-logo{background: #fff; padding: 50px 15px 15px; width: 120px; margin: 0 auto 40px;}
+.like-sec{justify-content:space-between;max-width:300px;margin:40px auto 0}
+.like-sec a{color: #343f59; font-size: 16px;}
+.like-sec a img{max-width:130px;}
+
+.user-section .form-main{background:#fff;border-radius:8px;}
+.user-section .form-main .main-form{padding:5px;}
+.user-section .main-form .form-group{margin-bottom:0;}
+.user-section h3{font-family: 'FuturaBT-Book'; color: #333f59; font-size: 18px; text-align: center; margin-bottom: 20px;}
+.user-section .form-main .main-form .ratting-point{justify-content: flex-start;}
+.user-section .form-main .main-form .ratting-point .common-label{margin-right:10px;}
+.camera-ic{max-width:20px;}
+.btn.btn-review{background:#e53935;color:#fff;}
+.btn.btn-outline{background:#fff;color:#343f59;border:1px solid #666;}
+.btn.btn-outline:hover{background:#666666;color:#fff;}
+
+.user-section .icon-field {position: relative; height: 44px; border: 1px solid #d8d8d8; border-radius: 4px; color: #818181; font-size: 14px; }
+.user-section .main-form .form-group.icon-field{ margin-bottom:20px;}
+.icon-field .input-icon {position: absolute; top: 7px; left: 15px; line-height: 18px; vertical-align: middle; width:calc(100% - 15px); }
+.icon-field .input-icon:before {content: ''; left: 30px; height: 34px; border-left: 1px solid #cdcdcd; position: absolute; top: -2px; }
+.icon-field label.checkbox-design{width: calc(100% - 20px); margin: 0;}
+.icon-field label.checkbox-design input[type="checkbox"] ~ span{top:7px;}
+.social-image{padding:0;}
+.social-image img{max-width:100px;}
+
+/*nEWCSS*/
+.CustomersReceive img{ box-shadow: 0 3px 10px #81daa5;border-radius: 9px;}
+.review-modify{position:relative;padding-left:150px; }
+.contentpadding{padding-left:150px;}
+.review-modify .user-img{position:absolute;left:0;}
+.LoggedIn header ul li >div{color: #b1c3c8;}
+.custumerblock{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #81daa5;
+    padding: 9px;
+    min-height:300px;
+    }
+    .custumorinner{box-shadow: 0px 0px 1px 5px #e4e4e4;padding:20px;border-radius: 8px;}
+    .custumorinner p{margin:0 0 20px;font-size:16px;text-align:center;font-weight:600; }
+    .custumorinner div{text-align:center;}
+    .custumorinner div{margin-bottom:19px;}
+    .custumorinner div img{box-shadow:none;max-width:150px;}
+    .dropdown.noti_Dropdown .dropdown-toggle::after{border:0px;margin:0px;}
+    .dropdown.noti_Dropdown .email-noti { right: -4px; top: -5px;}
+   .dropdown.noti_Dropdown  .badge-noti {right: -11px; top: -15px}
+   .dropdown.noti_Dropdown .dropdown-menu{left: 50%;transform: translateX(-50%)!important;
+    top: 100%!important;}
+  .dropdown-toggle{cursor:pointer;}
+   .dropdown.noti_Dropdown .dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #0b172e;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -7px;left: 50%;transform: translateX(-22%);
+}
+.form-shadow{box-shadow: 0 0 20px #eaeaea;
+    border-radius: 10px;}
+ .btn100.btn-login{width:100%;max-width:100%;}
+ .newbanner img{width:100%;}
+ .aboutus-banner h2{font-size:36px;font-weight:600;}
+ .aboutus-banner p{font-size:16px;}
+ .meet-text{float:left;}
+ .meetauto-inner{padding:30px 50px;}
+ .managment-inner,.custumer-inner{padding:50px;}
+ .managment-section{background:#eaeaea;}
+   .detail-block{padding:0 6px;}
+    .detail-block h6{font-weight:bold;}
+ .detail-block h6,.detail-block p{margin:0px;text-align:center;color:#343f59;font-family: 'FuturaBT-Book';}
+  .detail-block .imageblock{margin:0 0 10px;}
+  .detail-block .imageblock img{width:100%;height: auto;}
+  #review_header .block {
+    display: block;
+    height: 96px;
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+}
+#review_header .overall {
+    width: 100px;
+    color: white;
+}
+
+#review_header .overall .numbers {
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #cccccc;
+    padding: 11px 0;
+    float: none;
+    margin: 0;
+}
+#review_header .overall .color5 {
+    background-color: #019f17;
+}
+#shopper_review_page div {
+    line-height: 1;
+    vertical-align: top;
+}
+#shopper_review_page div {
+    line-height: 1;
+    vertical-align: top;
+}
+#shopper_review_page div {
+    line-height: 1;
+    vertical-align: top;
+}
+#review_header .overall .outof {
+    padding: 5px 0;
+    font-size: 14px;
+    background-color: #000;
+}
+#review_header .stars {
+    width: 135px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+#review_header .stars .desc {
+        padding-bottom: 6px;
+    margin: 0 auto;
+    line-height: 24px;
+    font-weight: bold;
+}
+#review_header .percentage {
+        width: 134px;
+    margin-left: 38px;
+    font-size: 12px;
+    padding-top: 5px;
+    line-height: 15px;}
+#review_header .percentage .numbers {
+    font-size: 32px;
+    font-weight: bold;
+       padding-bottom: 13px;
+}
+.review-ratingmain{margin-bottom:30px;}
+.starrating{margin:20px 10px 0;width:200px;}
+.stars.block .rating-stars ul > li.star > i.fa{font-size:17px;}
+.starrating .progress-item{margin:0px;}
+.starrating .ratting-name{font-size:14px;font-weight:600;}
+.starrating .progress-item .progress{height: 8px;background: #cccccc;border-radius: 0px;}
+.starrating    .progress-item .progress-bar { background: #01669a;}
+.banner-home img{width:100%;}
+.rating-comment{font-size:16px;margin:0px;}
+.rating-bottom{    border-top: 1px solid #d8d5d5;
+    padding: 10px 0 20px;}
+.meet-image{float: right;max-width:330px;margin-left:30px;}   
+.meet-image img{width:100%;}
+.meetauto-inner h3,.managment-section h2,.custumer-section h2{color:#343f59;font-family: 'FuturaBT-Book';}   
+.meet-text p{color:#343f59;font-family: 'FuturaBT-Book';font-size:15px;} 
