@@ -14,16 +14,16 @@ var fs = require('fs');
 //     cert: fs.readFileSync('./ssl/STARMO_1.CRT')
 // };
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // console.log(__dirname);
 
 app.get('/*', (req, res) => {
-    res.sendFile(__dirname + "/build/index.html");
+    res.sendFile(__dirname + "/public/index.html");
 })
 let port = process.env.NODE_ENV || 7181;
 
-https.createServer(app).listen(port, () => {
+http.createServer(app).listen(port, () => {
     console.log('Server is running on 7181')
 });
 
